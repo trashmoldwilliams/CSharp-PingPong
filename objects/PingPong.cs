@@ -15,7 +15,10 @@ namespace PingPongNS.Objects
       for (var i = 1; i <= number; i++)
       {
         string current = i + "";
-        if( i % 3 == 0 )
+        if( i % 15 == 0 )
+        {
+          current = "pingpong";
+        } else if( i % 3 == 0 )
         {
           current = "ping";
         } else if( i % 5 == 0)
