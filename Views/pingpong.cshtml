@@ -1,0 +1,9 @@
+@Html.Partial("header.cshtml")
+
+@Html.Partial("form.cshtml")
+
+<ul>
+  @foreach(var item in Model) {
+    <li>@item</li>
+  }
+</ul>

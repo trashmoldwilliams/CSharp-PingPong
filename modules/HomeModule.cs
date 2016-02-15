@@ -8,7 +8,13 @@ namespace PingPongNS
   {
     public HomeModule()
     {
-      Get["/"] = _ => { return View["header.cshtml"];
+      Get["/"] = _ => { return View["pingpong.cshtml", new List<string> {}];
+      };
+
+      Post["/pingpong"] = _ =>
+      {
+        List<string> model = PingPong.Play(Request.Form["number"]);
+        return View["pingpong.cshtml", model];
       };
     }
   }
