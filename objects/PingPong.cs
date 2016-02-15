@@ -14,7 +14,12 @@ namespace PingPongNS.Objects
       List<string> output = new List<string> {};
       for (var i = 1; i <= number; i++)
       {
-        output.Add(i + "");
+        string current = i + "";
+        if( i % 3 == 0 )
+        {
+          current = "ping";
+        }
+        output.Add(current);
       }
 
       return output;

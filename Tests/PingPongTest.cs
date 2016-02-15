@@ -14,5 +14,13 @@ namespace PingPongNS
       Assert.Equal(expectedList, pingPong);
     }
 
+    [Fact]
+    public void Play_ForNumberThree_ListOfOneTwoPing()
+    {
+      List<string> pingPong = PingPong.Play(3);
+      List<string> expectedList = new List<string> { "1", "2", "ping"};
+      Assert.Equal(expectedList, pingPong);
+    }
+
   }
 }
