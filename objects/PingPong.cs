@@ -12,6 +12,10 @@ namespace PingPongNS.Objects
     public static List<string> Play(int number)
     {
       List<string> output = new List<string> {};
+      if ( number > 100000)
+      {
+        number = 100000;
+      }
       for (var i = 1; i <= number; i++)
       {
         string current = i + "";

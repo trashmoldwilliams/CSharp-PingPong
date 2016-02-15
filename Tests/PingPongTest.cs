@@ -38,5 +38,10 @@ namespace PingPongNS
       Assert.Equal(expectedList, pingPong);
     }
 
+    [Fact]
+    public void Play_ForNumbersBiggerThanOneHundredThousand_ListFromOneToOneHundredThousand()
+    {
+      Assert.Equal(PingPong.Play(100000), PingPong.Play(2147483646));
+    }
   }
 }
