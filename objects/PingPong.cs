@@ -18,6 +18,9 @@ namespace PingPongNS.Objects
         if( i % 3 == 0 )
         {
           current = "ping";
+        } else if( i % 5 == 0)
+        {
+          current = "pong";
         }
         output.Add(current);
       }
